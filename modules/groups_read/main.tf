@@ -16,5 +16,5 @@ locals {
 }
 
 data "azuread_groups" "all" {
-  names = toset(var.azuread_group_names)
+  display_names = toset(var.azuread_group_names)
 }
