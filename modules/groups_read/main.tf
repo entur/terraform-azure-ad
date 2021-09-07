@@ -1,6 +1,6 @@
 locals {
   ad_groups_list = flatten([
-    for adg_name_i, adg_name in data.azuread_groups.all.names : {
+    for adg_name_i, adg_name in data.azuread_groups.all.display_names : {
       name = adg_name
       id   = data.azuread_groups.all.object_ids[adg_name_i]
     }
